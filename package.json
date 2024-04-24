@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "./",
-  "proxy": "http://kenshuttle.ap-south-1.elasticbeanstalk.com",
+  "proxy": "http://ec2-13-232-243-26.ap-south-1.compute.amazonaws.com:8080",
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
