@@ -125,13 +125,13 @@ function ResetPassword({ email }) {
           </Paper>
         </Box>
       </Container>
-      <button
+      {/* <button
         onClick={() => {
           navigate("/");
         }}
       >
         go back
-      </button>
+      </button> */}
     </div>
   );
 }

@@ -181,13 +181,13 @@ function ForgetPassword({ onForget }) {
           </Paper>
         </Box>
       </Container>
-      <button
+      {/* <button
         onClick={() => {
           navigate("/ResetPassword");
         }}
       >
         go back
-      </button>
+      </button> */}
     </div>
   );
 }
