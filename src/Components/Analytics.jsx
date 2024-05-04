@@ -103,7 +103,7 @@ function Analytics() {
   const [topWinnings, setTopWinnings] = useState([]);
   const [topMatchPoint, setTopMatchPoint] = useState([]);
   const [revenue, setRevenue] = useState([]);
-  const [weeksBooking, setWeeksBooking] = useState([]);
+  // const [weeksBooking, setWeeksBooking] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -123,15 +123,15 @@ function Analytics() {
         );
         setRevenue(lastSixMonthRev);
 
-        const response3 = await axios.get(
-          "/api/payment/bookingCountOfMonthAndWeek"
-        );
+        // const response3 = await axios.get(
+        //   "/api/payment/bookingCountOfMonthAndWeek"
+        // );
         // setWeeksBooking(response3.data);
-        const formattedWeeks = Object.entries(response3.data).map(
-          ([month, monthData]) => ({ name: month, data: monthData })
-        );
+        // const formattedWeeks = Object.entries(response3.data).map(
+        //   ([month, monthData]) => ({ name: month, data: monthData })
+        // );
 
-        setWeeksBooking(formattedWeeks);
+        // setWeeksBooking(formattedWeeks);
 
         const response4 = await axios.get(
           "/api/match/top-10-playersWithWinnings"

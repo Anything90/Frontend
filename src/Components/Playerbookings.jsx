@@ -78,8 +78,6 @@ const columns = [
   {
     field: "paymentStatus",
     headerName: "PaymentStatus",
-    // valueGetter: (params) =>
-    //   params.row.paymentId ? params.row.paymentId.paymentStatus : "",
     width: 130,
     cellClassName: (params) =>
       params.value === "SUCCESS" ? "active-cell-true" : "active-cell-false",
