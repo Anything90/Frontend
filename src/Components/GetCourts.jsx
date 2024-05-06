@@ -221,17 +221,19 @@ const AddClub = () => {
         clubData
       );
       console.log("Club added successfully:", response.status);
-      setClubData({
-        clubName: "",
-        clubArea: "",
-        clubCity: "",
-        clubAddressLine1: "",
-        clubAddressLine2: "",
-        clubPincode: "",
-        clubState: "",
-        clubRegion: "",
-      });
-      setMessage({ type: "success", text: "Club Added successfully" });
+      if (response.status === 200) {
+        setMessage({ type: "success", text: "Club Added successfully" });
+        setClubData({
+          clubName: "",
+          clubArea: "",
+          clubCity: "",
+          clubAddressLine1: "",
+          clubAddressLine2: "",
+          clubPincode: "",
+          clubState: "",
+          clubRegion: "",
+        });
+      }
     } catch (error) {
       setMessage({ type: "error", text: "Error adding club" });
       console.error("Error adding club:", error);

@@ -103,8 +103,10 @@ function Playerbookings() {
       const response = await axios.get("/api/booking/getallPlayerbookings");
       const playerBookings = response.data.map((book) => ({
         ...book,
-        paymentId: `${book.paymentId.id}`,
-        paymentStatus: `${book.paymentId.paymentStatus}`,
+        paymentId: book.paymentId ? `${book.paymentId.id}` : null,
+        paymentStatus: book.paymentId
+          ? `${book.paymentId.paymentStatus}`
+          : "CANCELLED",
       }));
       setPlayers(playerBookings);
     } catch (error) {

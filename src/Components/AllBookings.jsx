@@ -88,7 +88,7 @@ const AllBookings = () => {
       const response = await axios.get("/api/booking/getallbookings");
       const updatedBookings = response.data.map((book) => ({
         ...book,
-        paymentId: book.paymentId ? `${book.paymentId.id}` : null,
+        paymentId: book.paymentId ? `${book.paymentId.id}` : "CANCELLED",
         bookingStatus: `${book.bookingStatus}`,
       }));
       setBookings(updatedBookings);
