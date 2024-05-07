@@ -31,7 +31,7 @@ const UpdateScore = () => {
 
   const handleUpdateScore = async () => {
     try {
-      const response = await axios.post(
+      const response = await axios.put(
         `/api/match/updateScore?matchToken=${scoreData.matchToken}&teamOneScore=${scoreData.teamOneScore}&teamTwoScore=${scoreData.teamTwoScore}`
       );
       setMessage({ type: "success", text: "Score Updated!" });
@@ -56,7 +56,7 @@ const UpdateScore = () => {
 
   const handleEndMatch = async () => {
     try {
-      const response = await axios.post(
+      const response = await axios.put(
         `/api/match/end?matchToken=${scoreData.matchToken}`
       );
       console.log(response.data);
